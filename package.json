@@ -1,0 +1,23 @@
+{
+  "name": "cli-create-tool",
+  "version": "1.0.0",
+  "description": "A tool for cli creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "cct": "./bin/cct.js"
+  },
+  "keywords": [
+    "create",
+    "cli"
+  ],
+  "author": "luhaifeng",
+  "license": "ISC",
+  "devDependencies": {
+    "colors": "1.4.0",
+    "commander": "^8.1.0",
+    "shelljs": "^0.8.4"
+  }
+}
