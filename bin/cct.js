@@ -6,7 +6,8 @@ const colors = require('colors')
 const shell = require('shelljs')
 const { program } = require('commander')
 const packageJson = require('../package.json')
-const COLORS_DEFINATION = require('../utils/console-colors.js')
+const { run } = require('../src/index')
+const COLORS_DEFINATION = require('../constants/console-colors.js')
 
 console.log(path.dirname(__dirname))
 
@@ -44,7 +45,7 @@ argvs.forEach(key => {
     /** 创建包项目 */
     case '-C':
     case '--create':
-      console.log('create a cli project')
+      run()
       break
     default: break
   }
