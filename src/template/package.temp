@@ -1,0 +1,15 @@
+{
+  "name": "${PROJECT_NAME}",
+  "version": "1.0.0",
+  "description": "${PROJECT_DESCRIPTION}",
+  "main": "index.js",
+  "scripts": {
+    "ca": "git add -A && git-cz -av",
+    "commit": "git-cz"
+  },
+  "keywords": [],
+  "author": "${PROJECT_AUTHOR}",
+  "license": "ISC",
+  "devDependencies": {
+  }
+}

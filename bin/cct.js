@@ -6,8 +6,8 @@ const colors = require('colors')
 const shell = require('shelljs')
 const { program } = require('commander')
 const packageJson = require('../package.json')
-const { run } = require('../src/index')
-const COLORS_DEFINATION = require('../constants/console-colors.js')
+const { run } = require('../src/create/index')
+const COLORS_DEFINATION = require('../src/constants/console-colors.js')
 
 console.log(path.dirname(__dirname))
 
