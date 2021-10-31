@@ -6,6 +6,10 @@ const DEFAULT_QUESTIONS = [{
   validate: function (name) {
     const done = this.async()
     // 如果目录已经存在，提示修改目录名称
+    if (['', null, undefined].includes(name)) {
+      done('Please enter the project name!', true)
+      return
+    }
     if (fs.existsSync(name)) {
       done(`The directory "${name}" is exist!!Please reset the dirname.`, true)
       return
