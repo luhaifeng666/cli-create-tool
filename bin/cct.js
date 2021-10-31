@@ -9,7 +9,7 @@ const packageJson = require('../package.json')
 const { run } = require('../src/create/index')
 const COLORS_DEFINATION = require('../src/constants/console-colors.js')
 
-console.log(path.dirname(__dirname))
+console.log(path.dirname(__dirname), process.cwd())
 
 /** 定义控制台的输出颜色 */
 colors.setTheme(COLORS_DEFINATION)

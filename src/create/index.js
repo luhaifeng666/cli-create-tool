@@ -24,7 +24,8 @@ module.exports.run = async () => {
     // 获取输入的信息
     const { USE_DEFAULT } = await inquirer.prompt(questions)
     USE_DEFAULT ? await defaultCreateHandler(DEFAULT_QUESTIONS) : await customCreateHandler(CUSTOM_QUESTIONS)
+    console.log(chalk.green('CreationCompleted! Enjoy yourself!'))
   } catch (error) {
-    console.log(chalk.red(`Create objet defeat! The error message is: ${error}`))
+    console.log(chalk.red(`Create objet defeat: ${error}`))
   }
 }
