@@ -2,6 +2,11 @@
 
 require('zx/globals')
 
+/**
+ * 错误处理
+ * @param type 错误描述
+ * @param err 错误对象
+ */
 const errorHandler = ({type = 'Error: ', err = {}}) => {
   console.log(chalk.red(type, '>>>>', err.message))
 }
@@ -48,7 +53,7 @@ const copyDir = (from, to, cb) => {
                   return
                 }
                 // 如果是package.json文件，则将创建时填入的信息写入其中
-                if (path === 'package.json') cb()
+                if (path === 'package.js') cb()
               })
             }
           }
@@ -58,7 +63,7 @@ const copyDir = (from, to, cb) => {
   } catch(err) {
     errorHandler({ err })
   }
-  // 遍历所有的文件 
+  // 遍历所有的文件
 }
 
 module.exports = { copyDir, errorHandler }
