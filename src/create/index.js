@@ -22,9 +22,15 @@ const questions = [{
 module.exports.run = async () => {
   try {
     // 获取输入的信息
-    const { USE_DEFAULT } = await inquirer.prompt(questions)
-    USE_DEFAULT ? await defaultCreateHandler(DEFAULT_QUESTIONS) : await customCreateHandler(CUSTOM_QUESTIONS)
-    console.log(chalk.green('CreationCompleted! Enjoy yourself!'))
+    // const { USE_DEFAULT } = await inquirer.prompt(questions)
+    // USE_DEFAULT ? await defaultCreateHandler(DEFAULT_QUESTIONS) : await customCreateHandler(CUSTOM_QUESTIONS)
+    const dirName = await defaultCreateHandler(DEFAULT_QUESTIONS)
+    // 跳转至目录
+    cd(dirName)
+    // 执行安装命令
+    await $`yarn`
+    // 输出创建成功的命令
+    console.log(chalk.green('CreationCompleted!'))
   } catch (error) {
     console.log(chalk.red(`Create objet defeat: ${error}`))
   }

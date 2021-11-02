@@ -2,15 +2,14 @@
 
 const path = require('path')
 const process = require('process')
-const colors = require('colors')
 const shell = require('shelljs')
 const { program } = require('commander')
 const packageJson = require('../package.json')
+const helpHandle = require('../src/utils/help')
 const { run } = require('../src/create/index')
-const COLORS_DEFINATION = require('../src/constants/console-colors.js')
 
-/** 定义控制台的输出颜色 */
-colors.setTheme(COLORS_DEFINATION)
+/** 定义帮助信息 */
+helpHandle()
 
 const argvs = process.argv.slice(2)
 
@@ -19,9 +18,7 @@ argvs.forEach(key => {
     /** 查看当前插件版本 */
     case '-v':
     case '--version':
-      program.option('-v, --version', 'get the tool\'s version information')
-        .version(`v${packageJson.version}`)
-        .parse(process.argv)
+      program.version(`v${packageJson.version}`).parse(process.argv)
       break
     /** 更新当前插件至最新版本 */
     case '-u':
@@ -33,15 +30,15 @@ argvs.forEach(key => {
       /** 如果没有设置详细的版本号，则默认升级到最新版本 */
       let version = ''
       if (options.update === true) {
-        console.log('升级到最新的版本'.success)
+        console.log('升级到最新的版本')
       } else {
         version = options.update
-        console.log(`升级到${options.update}版本`.success)
+        console.log(`升级到${options.update}版本`)
       }
       shell.exec(`yarn upgrade cli-create-tool${version ? `@${version}` : ''}`)
       break
     /** 创建包项目 */
-    case '-C':
+    case '-c':
     case '--create':
       run()
       break

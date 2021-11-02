@@ -1,14 +1,23 @@
-# CLI-CREATE-TOOL
+# cli-create-tool
 
-用于创建空脚手架的工具
+Create an empty project quickly.
 
-## 安装
+![NodejsVersion](https://img.shields.io/badge/node-v14.13.1%2B-green)
+
+## Install
 
 ```js
-npm i -g cli-create-tool
+npm install -g cli-create-tool
 ```
 
-## 使用
+## Usage
 
 ```js
+cct [options]
+
+Options:
+  -V, --version           get the tool's version information
+  -U, --update [version]  update cli-create-tool
+  -C, --create            create an empty object
+  -h, --help              display help for command
 ```
