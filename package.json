@@ -24,6 +24,7 @@
   "dependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
+    "cli-create-tool": "1.0.1",
     "colors": "^1.4.0",
     "commander": "^8.3.0",
     "cz-conventional-changelog": "^3.3.0",

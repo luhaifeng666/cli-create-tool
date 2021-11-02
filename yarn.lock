@@ -396,6 +396,21 @@ chardet@^0.7.0:
   resolved "https://registry.npmmirror.com/chardet/download/chardet-0.7.0.tgz?cache=0&sync_timestamp=1634639202479&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fchardet%2Fdownload%2Fchardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha1-kAlISfCTfy7twkJdDSip5fDLrZ4=
 
+cli-create-tool@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cli-create-tool/-/cli-create-tool-1.0.1.tgz#1b98d196a8888f121748dcb285338fc7b0673aff"
+  integrity sha512-XU9DueJLzlw4FnfWT/dOCrxIUNiC+FGrilXzu9oafPPyiS1wrDu7eMIPUrB5f0SAzgfRVK58r0p24Bf8EYV1zw==
+  dependencies:
+    "@commitlint/cli" "^13.2.1"
+    "@commitlint/config-conventional" "^13.2.0"
+    colors "^1.4.0"
+    commander "^8.3.0"
+    cz-conventional-changelog "^3.3.0"
+    husky "^7.0.2"
+    inquirer "^8.2.0"
+    shelljs "^0.8.4"
+    zx "^4.2.0"
+
 cli-cursor@^2.1.0:
   version "2.1.0"
   resolved "https://registry.nlark.com/cli-cursor/download/cli-cursor-2.1.0.tgz?cache=0&sync_timestamp=1629747358529&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcli-cursor%2Fdownload%2Fcli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
