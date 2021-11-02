@@ -7,7 +7,8 @@
     "ca": "git add -A && git-cz -av",
     "commit": "git-cz",
     "pub:beta": "npm publish --tag=beta",
-    "pub": "npm publish"
+    "pub": "npm publish",
+    "change:version": "node src/utils/changeVersion.js"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
