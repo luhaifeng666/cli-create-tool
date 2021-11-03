@@ -1,6 +1,6 @@
 {
   "name": "cli-create-tool",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A tool for cli creation",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,8 @@
   ],
   "author": "luhaifeng",
   "license": "ISC",
+  "homepage": "https://github.com/luhaifeng666/create-cli-tool",
+  "repository": "https://github.com/luhaifeng666/create-cli-tool",
   "dependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",

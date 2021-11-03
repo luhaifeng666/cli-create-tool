@@ -3,7 +3,7 @@
 Create an empty project quickly.
 
 ![NodejsVersion](https://img.shields.io/badge/node-v14.13.1%2B-green)
-![CliCreateToolVersion](https://img.shields.io/badge/cli--create--tool-v1.0.3-orange)
+![CliCreateToolVersion](https://img.shields.io/badge/cli--create--tool-v1.0.4-orange)
 
 ## Install
 
