@@ -398,8 +398,8 @@ chardet@^0.7.0:
 
 cli-create-tool@1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/cli-create-tool/-/cli-create-tool-1.0.1.tgz#1b98d196a8888f121748dcb285338fc7b0673aff"
-  integrity sha512-XU9DueJLzlw4FnfWT/dOCrxIUNiC+FGrilXzu9oafPPyiS1wrDu7eMIPUrB5f0SAzgfRVK58r0p24Bf8EYV1zw==
+  resolved "https://registry.npmmirror.com/cli-create-tool/download/cli-create-tool-1.0.1.tgz#1b98d196a8888f121748dcb285338fc7b0673aff"
+  integrity sha1-G5jRlqiIjxIXSNyyhTOPx7BnOv8=
   dependencies:
     "@commitlint/cli" "^13.2.1"
     "@commitlint/config-conventional" "^13.2.0"

@@ -30,12 +30,13 @@ argvs.forEach(key => {
       /** 如果没有设置详细的版本号，则默认升级到最新版本 */
       let version = ''
       if (options.update === true) {
-        console.log('升级到最新的版本')
+        console.log(`升级${packageJson.name}到最新的版本`)
+        shell.exec(`npm update -g ${packageJson.name}`)
       } else {
         version = options.update
-        console.log(`升级到${options.update}版本`)
+        console.log(`安装${packageJson.name}@${version}`)
+        shell.exec(`npm i -g ${packageJson.name}@${version}`)
       }
-      shell.exec(`yarn upgrade cli-create-tool${version ? `@${version}` : ''}`)
       break
     /** 创建包项目 */
     case '-c':

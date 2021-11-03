@@ -10,7 +10,7 @@ const TAG_LINK_RULES = {
     node: 'node-v(.*)-green',
     [packageName]: 'cli--create--tool-v(.*)-orange'
 }
-// 获取命令行仓鼠
+// 获取命令行参数
 const options = process.argv.slice(2)
 let [tag, version] = options
 // 如果不传tag名称，则默认设置tag为包名称
@@ -20,17 +20,15 @@ if (!version) {
 }
 // 打印修改版本的信息
 console.table({
-    version,
-    tag
+    tag,
+    version
 })
 /**
  * 修改版本号图标
- * @param link
  * @param tag
  * @param version
  */
 function changeVersion (tag, version) {
-    console.log(process.cwd())
     const baseDir = `${process.cwd()}/README.md`
     // 获取README中的内容
     fs.readFile(baseDir, (err, data) => {

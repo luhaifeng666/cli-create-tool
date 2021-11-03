@@ -1,6 +1,6 @@
 {
   "name": "cli-create-tool",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A tool for cli creation",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "commit": "git-cz",
     "pub:beta": "npm publish --tag=beta",
     "pub": "npm publish",
-    "change:version": "node src/utils/changeVersion.js"
+    "change:version": "node src/utils/changeVersion.js",
+    "cnpm:sync": "cnpm sync cli-create-tool"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
