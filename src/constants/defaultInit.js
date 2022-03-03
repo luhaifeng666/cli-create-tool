@@ -1,8 +1,3 @@
-// 定义index.js内容
-const INDEX_CONTENT = {
-    filename: 'src/index.js',
-    content: ''
-}
 // 定义package.json内容
 const PACKAGE_CONTENT = {
     filename: 'package.json',
@@ -63,7 +58,6 @@ const GIT_IGNORE_CONTENT = {
 }
 
 module.exports = {
-    INDEX_CONTENT,
     PACKAGE_CONTENT,
     CZRC_CONTENT,
     HUSKYRC_CONTENT,
@@ -71,3 +65,4 @@ module.exports = {
     LINTSTAGEDRC_CONTENT,
     GIT_IGNORE_CONTENT
 }
+

@@ -22,13 +22,14 @@ const questions = [{
 module.exports.run = async () => {
   try {
     // 获取输入的信息
-    // const { USE_DEFAULT } = await inquirer.prompt(questions)
-    // USE_DEFAULT ? await defaultCreateHandler(DEFAULT_QUESTIONS) : await customCreateHandler(CUSTOM_QUESTIONS)
-    const dirName = await defaultCreateHandler(DEFAULT_QUESTIONS)
-    // 跳转至目录
-    cd(dirName)
-    // 执行安装命令
-    await $`yarn`
+    const { USE_DEFAULT } = await inquirer.prompt(questions)
+    // 使用默认模式
+    if (USE_DEFAULT) {
+      await defaultCreateHandler(DEFAULT_QUESTIONS)
+    } else {
+      // 使用自定义模式创建
+      await customCreateHandler([...CUSTOM_QUESTIONS, ...DEFAULT_QUESTIONS])
+    }
     // 输出创建成功的命令
     console.log(chalk.green('CreationCompleted!'))
   } catch (error) {

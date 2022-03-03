@@ -26,6 +26,11 @@ const DEFAULT_QUESTIONS = [{
   message: 'Project author:'
 }]
 // 定义自定义模板的提问
-const CUSTOM_QUESTIONS = []
+const CUSTOM_QUESTIONS = [{
+  type: 'list',
+  name: 'PROJECT_TYPE',
+  message: 'Choose project type:',
+  choices: ['vue2.x', 'vue3.x']
+}]
 
 module.exports = { DEFAULT_QUESTIONS, CUSTOM_QUESTIONS }
