@@ -29,10 +29,6 @@ module.exports = async questions => {
 				break
 			default: break
 		}
-		// 跳转到新目录
-		cd(PROJECT_NAME)
-		// 安装插件
-		await $`yarn add -D husky commitizen cz-conventional-changelog lint-staged`
 		// 初始化配置文件
 		initObject(answers, [
 			CZRC_CONTENT,
@@ -41,8 +37,12 @@ module.exports = async questions => {
 			LINTSTAGEDRC_CONTENT,
 			GIT_IGNORE_CONTENT
 		])
+		// 跳转到新目录
+		cd(PROJECT_NAME)
+		// 安装插件
+		await $`yarn add -D husky commitizen cz-conventional-changelog lint-staged`
 		// 往package.json文件添加自定义内容
-		const baseUrl = path.resolve(process.cwd(), PROJECT_NAME, 'package.json')
+		const baseUrl = path.resolve(process.cwd(), 'package.json')
 		fs.readFile(baseUrl, {
 			encoding: 'utf-8'
 		}, (err, data) => {
